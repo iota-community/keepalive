@@ -42,5 +42,6 @@ Activate venv
 `source keepalive/bin/activate`
 
 Install requirements  
-`pip3 install -r requirements.txt`
+`pip3 install -r requirements.txt`  
 
+https://discord.com/api/oauth2/authorize?client_id=<ID>&permissions=292057778176&scope=bot%20applications.commands
