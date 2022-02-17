@@ -38,9 +38,9 @@ Meaning send a keep-alive message to all monitored threads every day at 1 AM.
 Create Virtual Environment  
 `python3 -m venv keepalive`
 
-Activte venv  
+Activate venv  
 `source keepalive/bin/activate`
 
-Instal requirements  
+Install requirements  
 `pip3 install -r requirements.txt`
 
