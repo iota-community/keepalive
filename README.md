@@ -13,7 +13,7 @@ not work.
 
 The bot exports three (slash) commands:
 
- * `/addthread <thread ID>` all to either keep the given thread ID alive or all threads alive.
+ * `/addthread <thread ID>|all` to either keep the given thread ID alive or all threads alive.
  * `/rmthread <thread ID>` to stop keeping the given thread ID alive
  * `/lsthread` to list all thread IDs being kept alive
  
@@ -23,13 +23,17 @@ The bot exports three (slash) commands:
 ## Configuration
  
 Create a .env file in the bot directory with two variables:
+
 ```
 KEEPALIVE_BOT_SECRET="your bot token"
 KEEPALIVE_CRONTAB="your bot crontab for keeping threads alive"
 ```
+
 One good schedule to keep threads alive, IMHO is
 
-`KEEPALIVE_CRONTAB="0 1 * * *"`
+```
+KEEPALIVE_CRONTAB="0 1 * * *"
+```
 
 Meaning send a keep-alive message to all monitored threads every day at 1 AM.
 
