@@ -101,9 +101,11 @@ class Bot(Client):
         print(f'Keeping thread {thread_id} alive')
 
         try:
+            print(f'Trying to keep {thread_id} alive...')
             channel = await self.get_channel(int(thread_id))
             msg = await channel.send('ping')
             await msg.delete()
+            print(f'Kept {thread_id} alive.')
         except pincer.exceptions.NotFoundError:
             print(f'{thread_id} was not found. Consider removing it from the list')
 
